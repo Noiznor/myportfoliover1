@@ -1,7 +1,6 @@
 import React from 'react';
 import { ExternalLink, Github, Shield, Network, PenTool as Tool, Search } from 'lucide-react';
 import { projects } from '../data/projects';
-import type { Project } from '../types/Project';
 
 const Portfolio: React.FC = () => {
   const getCategoryIcon = (category: string) => {
@@ -105,7 +104,7 @@ const Portfolio: React.FC = () => {
                       className="flex items-center space-x-1 text-gray-400 hover:text-cyan-400 transition-colors text-sm"
                     >
                       <ExternalLink className="h-4 w-4" />
-                      <span>Demo</span>
+                      <span>Deployed</span>
                     </a>
                   )}
                 </div>

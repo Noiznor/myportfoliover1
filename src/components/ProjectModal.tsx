@@ -117,7 +117,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                 className="flex items-center justify-center space-x-3 px-6 py-3 bg-gradient-to-r from-green-600 to-cyan-600 hover:from-green-500 hover:to-cyan-500 rounded-lg transition-all duration-200 text-white font-medium shadow-lg hover:shadow-green-400/25"
               >
                 <ExternalLink className="h-5 w-5" />
-                <span>Live Demo</span>
+                <span>Deployed</span>
               </a>
             )}
           </div>

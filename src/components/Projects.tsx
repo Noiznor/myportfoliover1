@@ -112,7 +112,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects, onProjectClick }) => {
                       onClick={(e) => e.stopPropagation()}
                     >
                       <ExternalLink className="h-4 w-4" />
-                      <span>Demo</span>
+                      <span>Deployed</span>
                     </a>
                   )}
                 </div>

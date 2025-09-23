@@ -7,8 +7,8 @@ export const projects: Project[] = [
     shortDescription: "Automated network security assessment tool with real-time vulnerability detection",
     fullDescription: "A comprehensive network vulnerability scanner built with Python that performs automated security assessments on network infrastructures. The tool features real-time scanning capabilities, detailed vulnerability reporting, and integration with popular security frameworks. It includes modules for port scanning, service detection, vulnerability assessment, and generates detailed HTML reports with remediation recommendations.",
     technologies: ["Python", "Nmap", "Scapy", "SQLite", "Flask", "HTML/CSS"],
-    githubUrl: "https://github.com/username/vuln-scanner",
-    demoUrl: "https://demo.vulnscanner.com",
+  githubUrl: "https://github.com/username/vuln-scanner",
+  demoUrl: "https://genesispolotan.vercel.app/",
     images: [
       "https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg",
       "https://images.pexels.com/photos/5380664/pexels-photo-5380664.jpeg"
