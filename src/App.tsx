@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
-import Header from './components/Header';
+import { Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
 import Home from './components/Home';
-import Hero from './components/Hero';
+import HomeHero from './components/HomeHero';
+import About from './components/About';
 import Projects from './components/Projects';
+import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
 import ProjectModal from './components/ProjectModal';
 import { projects } from './data/projects';
 import type { Project } from './types/Project';
@@ -19,17 +23,15 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-green-400 font-mono">
-      {/* Matrix-style background */}
-      <div className="fixed inset-0 opacity-10 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-br from-green-900/20 via-black to-cyan-900/20"></div>
-      </div>
-      
-      <div className="relative z-10">
-        <Header />
-        <Home />
-        <Projects projects={projects} onProjectClick={handleProjectClick} />
-      </div>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<HomeHero />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects projects={projects} onProjectClick={handleProjectClick} />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
 
       {selectedProject && (
         <ProjectModal
@@ -37,7 +39,7 @@ function App() {
           onClose={handleCloseModal}
         />
       )}
-    </div>
+    </Layout>
   );
 }
 

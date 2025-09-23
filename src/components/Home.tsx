@@ -22,7 +22,7 @@ const Home: React.FC = () => {
 
   const commands: Record<string, { output: string; action: null | (() => void) | string }> = {
     help: { output: `Available commands:\nwhoami - Display user information\naboutme - Learn more about me\nmyproject - View my projects\ncontact - Get contact information\nexperience - Show work experience\nclear - Clear terminal\nls - List directory contents\npwd - Show current directory`, action: null },
-    whoami: { output: 'Loading...Welcone!!!', action: () => navigate('/home-hero') },
+    whoami: { output: 'Loading...Welcome!!!', action: () => navigate('/home') },
     aboutme: { output: 'Redirecting to About section...', action: () => navigate('/about') },
     myproject: { output: 'Loading projects...', action: () => navigate('/portfolio') },
     contact: { output: 'Opening contact information...', action: () => navigate('/contact') },
