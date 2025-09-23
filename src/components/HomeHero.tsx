@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown } from 'lucide-react';
 
 const Home: React.FC = () => {
   const roles = [
@@ -116,15 +115,9 @@ const Home: React.FC = () => {
                   <span className="text-green-400">genesis@portfolio:~$ </span>
                   <span className="text-white">./explore_portfolio.sh</span>
                 </div>
-                <div className="flex justify-center">
-                  <a
-                    href="#about"
-                    className="group flex items-center space-x-2 px-6 py-3 border border-green-500/50 rounded-lg hover:border-green-400 hover:bg-green-400/10 transition-all duration-300 text-green-400 hover:text-green-300"
-                  >
-                    <span>Explore My Work</span>
-                    <ChevronDown className="h-4 w-4 group-hover:translate-y-1 transition-transform" />
-                  </a>
-                </div>
+                  <div className="flex justify-center">
+                    <button className="inline-flex items-center justify-center px-6 py-3 border border-green-500/50 rounded-lg text-green-400 bg-black/0 cursor-not-allowed" aria-disabled="true" title="Use terminal command 'myproject' to navigate">Explore My Work</button>
+                  </div>
               </div>
             </div>
           </div>

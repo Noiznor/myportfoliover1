@@ -1,6 +1,5 @@
 import React from 'react';
-import { Shield, Terminal, Network } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Shield } from 'lucide-react';
 
 const Header: React.FC = () => {
   return (
@@ -22,22 +21,8 @@ const Header: React.FC = () => {
             </div>
           </div>
           
-              <nav className="hidden md:flex items-center space-x-8">
-                <Link to="/home" className="hover:text-cyan-400 transition-colors duration-200">
-                  Home
-                </Link>
-                <Link to="/about" className="hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-1">
-                  <Terminal className="h-4 w-4" />
-                  <span>About</span>
-                </Link>
-                <Link to="/projects" className="hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-1">
-                  <Network className="h-4 w-4" />
-                  <span>Projects</span>
-                </Link>
-                <Link to="/contact" className="hover:text-cyan-400 transition-colors duration-200">
-                  Contact
-                </Link>
-              </nav>
+              {/* Navigation intentionally hidden — commands only */}
+              <nav className="hidden" aria-hidden="true" />
         </div>
       </div>
     </header>

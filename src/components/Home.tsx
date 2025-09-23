@@ -136,15 +136,16 @@ const Home: React.FC = () => {
             </form>
           </div>
 
+          {/* Hidden quick command hints — navigation is commands-only */}
           <div className="bg-gray-900/50 border-t border-green-500/20 px-4 py-2">
-            <div className="flex flex-wrap gap-4 text-sm text-gray-500">
-              <span className="hover:text-green-400 cursor-default">help</span>
-              <span className="hover:text-green-400 cursor-default">whoami</span>
-              <span className="hover:text-green-400 cursor-default">about</span>
-              <span className="hover:text-green-400 cursor-default">portfolio</span>
-              <span className="hover:text-green-400 cursor-default">skills</span>
-              <span className="hover:text-green-400 cursor-default">contact</span>
-              <span className="hover:text-green-400 cursor-default">clear</span>
+            <div className="flex flex-wrap gap-4 text-sm text-gray-500 opacity-0 pointer-events-none" aria-hidden="true">
+              <span>help</span>
+              <span>whoami</span>
+              <span>about</span>
+              <span>portfolio</span>
+              <span>skills</span>
+              <span>contact</span>
+              <span>clear</span>
             </div>
           </div>
         </div>
