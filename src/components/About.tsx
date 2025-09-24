@@ -29,9 +29,11 @@ const About: React.FC = () => {
               <h3 className="text-sm text-green-200 font-mono mb-2">Quick Information (developer mode)</h3>
               <pre className="bg-black/80 border border-green-500/20 rounded-md p-3 text-green-300 text-xs font-mono overflow-auto">
 {`$credentials
-  CCNA-certified Network & Security Engineer(2025)
-  Oracle Cloud Data Management Associate & cloud Infrastructure Associate(2023),
+  Oracle Cloud Data Management Associate & cloud Infrastructure Associate(2023)
   Google Analytic Certification(2023)
+  Microsoft Certified: Windows Server Hybrid Administrator Associate(2023)
+  CCNA-certified Network & Security Engineer(2025)
+
 
 $tools
   Cisco  Windows Server 2016/2019  

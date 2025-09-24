@@ -3,12 +3,12 @@ import type { Project } from '../types/Project';
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Network Vulnerability Scanner",
-    shortDescription: "Automated network security assessment tool with real-time vulnerability detection",
-    fullDescription: "A comprehensive network vulnerability scanner built with Python that performs automated security assessments on network infrastructures. The tool features real-time scanning capabilities, detailed vulnerability reporting, and integration with popular security frameworks. It includes modules for port scanning, service detection, vulnerability assessment, and generates detailed HTML reports with remediation recommendations.",
-    technologies: ["Python", "Nmap", "Scapy", "SQLite", "Flask", "HTML/CSS"],
-  githubUrl: "https://github.com/username/vuln-scanner",
-  demoUrl: "https://genesispolotan.vercel.app/",
+    title: "My Cmd Portfolio",
+    shortDescription: "A command-line styled personal portfolio showcasing projects and skills.",
+    fullDescription: "This portfolio is a command-line inspired, single-page React application built to showcase projects, skills, and contact information. It uses a terminal UI aesthetic, route-based navigation, and a hidden visual nav so visitors navigate via typed commands. The site is implemented with modern front-end tooling for fast builds and a polished UI.",
+    technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "React Router", "lucide-react", "@supabase/supabase-js"],
+    githubUrl: "https://github.com/Noiznor/myportfoliover1",
+    demoUrl: "https://genesispolotan.vercel.app/",
     images: [
       "https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg",
       "https://images.pexels.com/photos/5380664/pexels-photo-5380664.jpeg"
