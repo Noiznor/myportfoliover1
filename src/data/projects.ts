@@ -1,4 +1,5 @@
 import type { Project } from '../types/Project';
+import portfolioTerminalImage from '../assets/portfolio-terminal.png';
 
 export const projects: Project[] = [
   {
@@ -10,10 +11,9 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/Noiznor/myportfoliover1",
     demoUrl: "https://genesispolotan.vercel.app/",
     images: [
-      "https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg",
-      "https://images.pexels.com/photos/5380664/pexels-photo-5380664.jpeg"
+      portfolioTerminalImage
     ],
-    category: "security"
+    category: "web"
   },
   {
     id: 2,

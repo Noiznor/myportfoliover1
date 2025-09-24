@@ -7,5 +7,5 @@ export interface Project {
   githubUrl: string;
   demoUrl?: string;
   images: string[];
-  category: 'security' | 'networking' | 'tools' | 'research';
+  category: 'security' | 'networking' | 'tools' | 'research' | 'web';
 }

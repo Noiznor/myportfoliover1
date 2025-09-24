@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Github, ExternalLink, Shield, Network, PenTool as Tool, Search } from 'lucide-react';
+import { X, Github, ExternalLink, Shield, Network, PenTool as Tool, Search, Globe } from 'lucide-react';
 import type { Project } from '../types/Project';
 
 interface ProjectModalProps {
@@ -14,6 +14,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
       case 'networking': return <Network className="h-6 w-6" />;
       case 'tools': return <Tool className="h-6 w-6" />;
       case 'research': return <Search className="h-6 w-6" />;
+      case 'web': return <Globe className="h-6 w-6" />;
       default: return <Shield className="h-6 w-6" />;
     }
   };
@@ -24,6 +25,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
       case 'networking': return 'text-cyan-400 bg-cyan-400/10 border-cyan-500/30';
       case 'tools': return 'text-yellow-400 bg-yellow-400/10 border-yellow-500/30';
       case 'research': return 'text-purple-400 bg-purple-400/10 border-purple-500/30';
+      case 'web': return 'text-blue-400 bg-blue-400/10 border-blue-500/30';
       default: return 'text-green-400 bg-green-400/10 border-green-500/30';
     }
   };
@@ -33,6 +35,8 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
       onClose();
     }
   };
+
+  const isSingleImage = project.images.length === 1;
 
   return (
     <div
@@ -63,15 +67,18 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
         <div className="p-6">
           {/* Images Gallery */}
           <div className="mb-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className={`grid gap-4 ${isSingleImage ? 'grid-cols-1' : 'grid-cols-1 md:grid-cols-2'}`}>
               {project.images.map((image, index) => (
-                <div key={index} className="relative rounded-lg overflow-hidden">
+                <div
+                  key={index}
+                  className={`relative overflow-hidden rounded-lg bg-black ${isSingleImage ? 'aspect-[16/9]' : 'aspect-[4/3]'}`}
+                >
                   <img
                     src={image}
                     alt={`${project.title} screenshot ${index + 1}`}
-                    className="w-full h-64 object-cover"
+                    className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                 </div>
               ))}
             </div>

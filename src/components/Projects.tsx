@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Github, Shield, Network, PenTool as Tool, Search } from 'lucide-react';
+import { ExternalLink, Github, Shield, Network, PenTool as Tool, Search, Globe } from 'lucide-react';
 import type { Project } from '../types/Project';
 
 interface ProjectsProps {
@@ -14,6 +14,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects, onProjectClick }) => {
       case 'networking': return <Network className="h-5 w-5" />;
       case 'tools': return <Tool className="h-5 w-5" />;
       case 'research': return <Search className="h-5 w-5" />;
+      case 'web': return <Globe className="h-5 w-5" />;
       default: return <Shield className="h-5 w-5" />;
     }
   };
@@ -24,6 +25,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects, onProjectClick }) => {
       case 'networking': return 'text-cyan-400 border-cyan-500/30';
       case 'tools': return 'text-yellow-400 border-yellow-500/30';
       case 'research': return 'text-purple-400 border-purple-500/30';
+      case 'web': return 'text-blue-400 border-blue-500/30';
       default: return 'text-green-400 border-green-500/30';
     }
   };
@@ -33,11 +35,10 @@ const Projects: React.FC<ProjectsProps> = ({ projects, onProjectClick }) => {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-green-400 mb-4">
-            Security Projects
+            Featured Projects
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            A collection of cybersecurity tools, research projects, and security solutions 
-            I've developed to enhance organizational security posture.
+            A collection of security research, networking tools, and modern web builds that showcase my approach to solving technical problems.
           </p>
           <div className="mt-6 h-px bg-gradient-to-r from-transparent via-green-400/50 to-transparent"></div>
         </div>
@@ -50,11 +51,11 @@ const Projects: React.FC<ProjectsProps> = ({ projects, onProjectClick }) => {
               onClick={() => onProjectClick(project)}
             >
               {/* Project Image */}
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative aspect-[16/9] w-full bg-black overflow-hidden">
                 <img
                   src={project.images[0]}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                 
@@ -131,3 +132,4 @@ const Projects: React.FC<ProjectsProps> = ({ projects, onProjectClick }) => {
 };
 
 export default Projects;
+
