@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 
 const Home: React.FC = () => {
   const roles = [
-    "I'm a freelance Developer",
+    "I'm a Freelance Developer",
     "a Computer Engineering Student", 
-    "cybersecurity enthusiast",
-    "Head Network Engineer at SPHR"
+    "Cybersecurity Enthusiast",
+    "Head Network Engineer at SPHR Tech"
   ];
   
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
